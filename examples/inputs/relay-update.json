@@ -1,0 +1,23 @@
+{
+  "project": "Relay pilot",
+  "period": "Week of 28 Sep 2026",
+  "as_of": "1 Oct 2026",
+  "status": "At risk",
+  "headline": "Pilot waits on export permissions",
+  "progress": [
+    "Review comments are tied to versions.",
+    "Keyboard navigation passed the review."
+  ],
+  "next": ["Retest export permissions with partners."],
+  "decision": "Name the support-handoff owner before pilot invitations.",
+  "milestone": {
+    "label": "Invite the first pilot teams",
+    "date": "24 October"
+  },
+  "owner": null,
+  "source_notes": [
+    "Original fictional example. No real project or customer data.",
+    "Source: examples/inputs/relay-weekly-notes.md, as of 1 October 2026.",
+    "The source notes provide no progress percentage or adoption metric."
+  ]
+}
