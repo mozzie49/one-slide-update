@@ -17,9 +17,11 @@ renderer. No other runtime package or external connection is required.
 Respect the user's format, language, branding, slide count and template choices.
 If a supplied template is required, use that instead of this kit. If the user
 wants a document, Google Slides, or another format, do not silently deliver PPTX.
-These assets use English section labels and Latin-script fit metrics. A different
-language/font needs deliberate template adaptation and rendered review; do not
-translate the user's content to fit the helper.
+Use the default `en` profile for English labels and Liberation Sans. For Chinese
+or mixed Chinese/Latin input, read [Chinese support](references/chinese.md) and
+select `zh-CN`, which requires Noto Sans CJK SC Regular/Bold for rendering. It
+changes labels and missing-data phrases without translating user content. Other
+languages/fonts need deliberate adaptation and rendered review.
 
 - `standard`: progress leads, with next action and checkpoint alongside
 - `blocker`: a decision or support request deserves the most space
@@ -33,7 +35,7 @@ Changing layout must not invent a blocker or a date.
 Copy `assets/update-input.json` to a task-local file and fill only supported facts.
 The JSON fields are `project`, `period`, `as_of`, `status`, `headline`, `progress`
 (array), `next` (array), `decision`, `milestone` (`label`, `date`), `owner`, and
-`source_notes` (array). `layout` is optional. Keep the headline descriptive.
+`source_notes` (array). `layout` and `language` (`en` or `zh-CN`) are optional. Keep the headline descriptive.
 
 Preserve units, uncertainty, dates and meaning. Never manufacture progress
 percentages, KPIs, approvals, quotes, sources or green status. A date relative to

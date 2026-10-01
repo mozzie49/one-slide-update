@@ -1,0 +1,25 @@
+{
+  "project": "松桥 Atlas 客服试点",
+  "period": "2026年9月28日至10月2日",
+  "as_of": "2026年10月1日",
+  "status": "待评估",
+  "headline": "Atlas API 联调完成，试点时间待确认",
+  "progress": [
+    "已完成 API v2 联调。",
+    "FAQ 初稿已交客服试读。"
+  ],
+  "next": [
+    "汇总试读意见，确认验收人。"
+  ],
+  "decision": "请确认试点验收负责人。",
+  "milestone": {
+    "label": "Atlas 小范围试点",
+    "date": null
+  },
+  "owner": null,
+  "source_notes": [
+    "原创虚构示例，与任何真实客户、公司或项目无关。",
+    "API v2 联调和 FAQ 初稿来自这份虚构周报；未提供试点日期或验收负责人。"
+  ],
+  "language": "zh-CN"
+}

@@ -8,7 +8,11 @@
   "progress": [],
   "next": [],
   "decision": null,
-  "milestone": {"label": null, "date": null},
+  "milestone": {
+    "label": null,
+    "date": null
+  },
   "owner": null,
-  "source_notes": []
+  "source_notes": [],
+  "language": "en"
 }

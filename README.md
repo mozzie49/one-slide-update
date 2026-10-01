@@ -82,8 +82,10 @@ Start from [`assets/update-input.json`](skills/one-slide-update/assets/update-in
 - `owner`: the owner supplied by the notes
 - `source_notes`: provenance pointers, placed in editable speaker notes
 - `layout`: optional `standard`, `blocker`, or `milestone`
+- `language`: optional `en` (default) or `zh-CN`; the CLI option takes precedence
 
-Missing/null fields display as “not provided” or “Not assessed.” This does not
+Missing/null fields display as “not provided” or “Not assessed,” or their Chinese
+equivalents in the `zh-CN` profile. This does not
 mean nothing happened or no risk exists. The helper never guesses dates or
 calculates progress. It does not verify whether supplied claims are true.
 
@@ -93,7 +95,7 @@ calculates progress. It does not verify whether supplied claims are true.
 - Every supported text shape stays within slide bounds
 - Named text slots retain their designed positions and sizes
 - Text boxes do not overlap
-- Font family, size and weight stay unchanged
+- Expected font family, size and weight match the selected language profile
 - Explicit line wraps fit conservative width/line-count budgets
 - Long text fails with the field name instead of shrinking or truncating
 
@@ -101,27 +103,57 @@ The helper fills **these bundled templates**, not arbitrary customer PPTX
 files. It doesn't send, publish, upload, or update a live deck. There is no
 telemetry. Input/output stay on the machine where you run it.
 
+## 中文与中英混排 / Chinese support
+
+Choose `zh-CN` for Chinese labels, Chinese missing-data phrases and measured
+Noto Sans CJK SC typography. Supplied text stays in its original language.
+
+```sh
+python skills/one-slide-update/scripts/fill_update.py fill \
+  examples/inputs/chinese-mixed-update.json chinese-update.pptx --layout blocker
+python skills/one-slide-update/scripts/fill_update.py check \
+  chinese-update.pptx --layout blocker
+```
+
+The example JSON contains `"language": "zh-CN"`. You can instead pass
+`--language zh-CN`; `en` remains the default for existing inputs.
+
+渲染或打开中文幻灯片的电脑需要安装 **Noto Sans CJK SC Regular 和 Bold 2.004**。
+程序不会自动安装字体、翻译内容、推测日期或负责人。缺字或超出布局容量时会报错，
+不会缩小字号或静默删减。生成后请在实际使用的演示软件中检查。
+
+| Layout | Editable Chinese/Latin example | Preview |
+|---|---|---|
+| Standard | [PPTX](examples/outputs/chinese-mixed-standard.pptx) | [PNG](examples/previews/chinese-mixed-standard.png) |
+| Blocker | [PPTX](examples/outputs/chinese-mixed-blocker.pptx) | [PNG](examples/previews/chinese-mixed-blocker.png) |
+| Milestone | [PPTX](examples/outputs/chinese-mixed-milestone.pptx) | [PNG](examples/previews/chinese-mixed-milestone.png) |
+
+These are original fictional examples. The [Chinese missing-data preview](examples/previews/chinese-missing-standard.png)
+shows what happens when no facts are supplied.
+
 ## Limits and visual review
 
-The v0 assets have English section labels. Fit metrics cover Latin-script text
-and common punctuation. Unsupported characters produce an explicit error;
-there is no silent translation or replacement glyph. The [original Chinese-input
-fixture](examples/inputs/chinese-update.json) was tested and exits with an explicit
-unsupported-character error before writing a PPTX. No CJK slide was rendered, so
-CJK font fallback and rendered line fit are unverified. Preserve a user's language
-and required template, even if that means adapting a layout outside this helper.
+English uses Liberation Sans; `zh-CN` uses **Noto Sans CJK SC 2.004 Regular/Bold**,
+including its Latin glyphs. Fonts are not bundled, installed or embedded. Obtain
+them from the [official Noto CJK distribution](https://github.com/notofonts/noto-cjk/tree/main/Sans).
+The helper can generate a file without the fonts, but it cannot prevent your
+editor from substituting another face. Install the required fonts on the
+rendering/viewing machine and inspect the exact output before sharing.
 
-Templates use Liberation Sans, a metrically compatible alternative to Arial.
-The font is not bundled or installed. Open the output and check it before
-sharing, especially if your editor substitutes fonts. Width budgets include a
-margin and line breaks are explicit, but they cannot guarantee identical
-rendering in every application.
+Chinese fit estimates use measured glyph coverage/advances, a conservative
+allowance for CJK/Latin auto-spacing, and explicit ink/vertical guards. Unsupported
+characters fail before output. This is BMP Chinese plus a measured Latin and
+punctuation subset, not all Unicode: emoji, non-BMP Han, combining marks, variation
+selectors and unusually tall stacked accents are deliberately unsupported.
+See [font requirements and precise limits](skills/one-slide-update/references/chinese.md).
 
-The supplied templates and examples were rendered with LibreOffice and reviewed
-as PNGs. Text remains native PPTX text; slides contain no flattened screenshots.
+The three Chinese layouts, mixed-script examples, missing-data cases and maximum
+line-count fixtures were rendered with LibreOfficeDev 26.8 and reviewed as PNGs.
+Native text remains editable. Exported PDF fonts and glyph-outline bounds were
+also checked; no fallback font or measured overflow appeared in those fixtures.
 PowerPoint, Keynote and Google Slides application behavior has not been tested.
-No automatic fact checking, chart generation, visual fit certification, or
-measured productivity gain is claimed.
+No automatic fact checking, chart generation, cross-editor visual fit
+certification, or measured productivity gain is claimed.
 
 ## Development checks
 
@@ -155,6 +187,8 @@ suite do not establish factual accuracy or compatibility with every slide editor
 ## License
 
 Original layouts, examples, instructions and code: [MIT](LICENSE).
-The measured font-advance data retains its [SIL Open Font License notice](skills/one-slide-update/assets/FONT_LICENSE.txt).
+The measured font data retains its SIL Open Font License notices for
+[Liberation Sans](skills/one-slide-update/assets/FONT_LICENSE.txt) and
+[Noto Sans CJK SC](skills/one-slide-update/assets/CJK_FONT_LICENSE.txt).
 No font binary, stock slide template, proprietary/internal skill, or third-party
 logo is included.

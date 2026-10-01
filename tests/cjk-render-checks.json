@@ -1,0 +1,98 @@
+[
+  {
+    "file": "boundary-blocker.pdf",
+    "lines": 24,
+    "glyphs": 380,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "boundary-milestone.pdf",
+    "lines": 23,
+    "glyphs": 355,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "boundary-standard.pdf",
+    "lines": 24,
+    "glyphs": 379,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-missing-blocker.pdf",
+    "lines": 14,
+    "glyphs": 76,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-missing-milestone.pdf",
+    "lines": 14,
+    "glyphs": 78,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-missing-standard.pdf",
+    "lines": 14,
+    "glyphs": 76,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-mixed-blocker.pdf",
+    "lines": 16,
+    "glyphs": 149,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-mixed-milestone.pdf",
+    "lines": 15,
+    "glyphs": 151,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-mixed-standard.pdf",
+    "lines": 16,
+    "glyphs": 149,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-original-blocker.pdf",
+    "lines": 18,
+    "glyphs": 151,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-original-milestone.pdf",
+    "lines": 16,
+    "glyphs": 153,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  },
+  {
+    "file": "chinese-original-standard.pdf",
+    "lines": 16,
+    "glyphs": 151,
+    "max_outline_overrun_pt": 0,
+    "fonts": "NotoSansCJKsc-Regular/Bold only",
+    "text_preserved": true
+  }
+]
