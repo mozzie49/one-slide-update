@@ -1,0 +1,173 @@
+{
+  "name": "one-slide-update",
+  "version": "0.1.0",
+  "generated_date": "2026-10-01",
+  "scope": "Public v0.1.0 source tree. Manifest excludes itself and local caches.",
+  "file_count": 32,
+  "content_bytes": 865266,
+  "runtime": "Python 3.10+ standard library",
+  "cjk": "Explicitly rejected before PPTX creation; CJK rendering and font fallback unverified.",
+  "tests_passed": 22,
+  "files": [
+    {
+      "path": ".github/workflows/tests.yml",
+      "bytes": 302,
+      "sha256": "7add6f369f4da199975f7a4b2a43290ca5bbba2254b0f4344b3b7bd6f4295d65"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 52,
+      "sha256": "16fae445a8af531b91e81c1f4ac1d1e659ab31e68ff9d15094f45f117246cfd5"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1086,
+      "sha256": "7cb22cc73beb6fd5f48dec751c2521a23b53971bc4bb51d8239c586bfb488cdd"
+    },
+    {
+      "path": "README.md",
+      "bytes": 7480,
+      "sha256": "dff7be00d78104099ca1c8f5e3c505c743ca0de4dc1a57f0060b4f36362995ef"
+    },
+    {
+      "path": "examples/inputs/chinese-update.json",
+      "bytes": 840,
+      "sha256": "b1d29b98aeb6ddf46bc4eb7983b29287bf1bfa4d67a324628a0ab3e69608118a"
+    },
+    {
+      "path": "examples/inputs/missing-data.json",
+      "bytes": 252,
+      "sha256": "97f478d6a89b7a41c94c32c56427399ab953359b572ed4cc0b8fd2a013e55964"
+    },
+    {
+      "path": "examples/inputs/relay-update.json",
+      "bytes": 759,
+      "sha256": "f45acbc760a507a0e9b39a045f27dcafcf6a5b9fa5679cccddf230d6b11d75cb"
+    },
+    {
+      "path": "examples/inputs/relay-weekly-notes.md",
+      "bytes": 870,
+      "sha256": "42e74fa96b1a5d8eb77d46ccb8133be29a7ab07c2686ed0f136ad8a597526dd7"
+    },
+    {
+      "path": "examples/outputs/missing-data.pptx",
+      "bytes": 12500,
+      "sha256": "3ce004dffa2fcc56ad59a6903e4123e94718874f6cb3bac78b2ab6b3d9eaf272"
+    },
+    {
+      "path": "examples/outputs/relay-blocker.pptx",
+      "bytes": 12697,
+      "sha256": "739f0dd7ccfa0d9936b4864c25c35744bf2082b0f28e2c2adbe18bb3c9249909"
+    },
+    {
+      "path": "examples/outputs/relay-milestone.pptx",
+      "bytes": 12834,
+      "sha256": "5c516895e720e79cb123a9af5aa4a10d0f29b3ac0cd535151fdc0ccfe582938b"
+    },
+    {
+      "path": "examples/outputs/relay-standard.pptx",
+      "bytes": 12686,
+      "sha256": "9c0febcbdd1a16879e6c4a626a145265b0fc6d859b9c6c0f6995f60135f3f3ce"
+    },
+    {
+      "path": "examples/previews/blocker.png",
+      "bytes": 83456,
+      "sha256": "46c94bb11a5e6c2c05a30356133bdb0ae74ad01853ec6f708b3c711580412fea"
+    },
+    {
+      "path": "examples/previews/milestone.png",
+      "bytes": 93882,
+      "sha256": "c02b8d4505a56b30c85740662f81265001901c072750611420371431edb1162c"
+    },
+    {
+      "path": "examples/previews/missing-data.png",
+      "bytes": 91552,
+      "sha256": "e1dd40e94ee0e58a9a9df40b71c61df2cfce83d91394c1c5a9064c11fabf5739"
+    },
+    {
+      "path": "examples/previews/relay-blocker.png",
+      "bytes": 113791,
+      "sha256": "6dedfd9dabe219ebe5d9593c37483f9578edfa1b57766bb6664695b15b7da199"
+    },
+    {
+      "path": "examples/previews/relay-milestone.png",
+      "bytes": 122230,
+      "sha256": "7e87fba18281c1fea0cdc51cf2c4519520d9fc37f0d2ac69a00fe4678c49b4c0"
+    },
+    {
+      "path": "examples/previews/relay-standard.png",
+      "bytes": 116931,
+      "sha256": "0d6de67f033832d60b37debfc219f99c8324a16d8dd04161893ebf29d9dda38a"
+    },
+    {
+      "path": "examples/previews/standard.png",
+      "bytes": 88460,
+      "sha256": "8244abb8bcfca3fa0db930ab3cc5ec195e5088c5585209fd04ab1182a941f7c4"
+    },
+    {
+      "path": "skills/one-slide-update/SKILL.md",
+      "bytes": 3909,
+      "sha256": "bfb792dac29071513bd6e5a08e26a580a7e73bff5f05e13bac16801236da7aee"
+    },
+    {
+      "path": "skills/one-slide-update/assets/FONT_LICENSE.txt",
+      "bytes": 5869,
+      "sha256": "c175022bef9da761ecf88ddbf8ea81a5c23ab4abcd51f2fddf014ae437f25c50"
+    },
+    {
+      "path": "skills/one-slide-update/assets/blocker.pptx",
+      "bytes": 12917,
+      "sha256": "aa7b062fd86aacd65ec9b485bbab19d4f4ca95b2c57e17ffc5c304857478ce8d"
+    },
+    {
+      "path": "skills/one-slide-update/assets/font-metrics.json",
+      "bytes": 8278,
+      "sha256": "5b3bdab34ebf54c7f774c806c2cbfdda0478520971c9dca77bbdde9c6edb339a"
+    },
+    {
+      "path": "skills/one-slide-update/assets/layouts.json",
+      "bytes": 6367,
+      "sha256": "0f5bb4fb2739a5842405fc71241660544ac508064f5f3bac3de794883f7e500e"
+    },
+    {
+      "path": "skills/one-slide-update/assets/milestone.pptx",
+      "bytes": 13053,
+      "sha256": "96129a00f272cfc7ea0ecb03f603aafa523931cb26aff209b54b6dade95911bb"
+    },
+    {
+      "path": "skills/one-slide-update/assets/standard.pptx",
+      "bytes": 12933,
+      "sha256": "5677fa6aab08cd5f15a3a81622f67caade84a3f0a1542981dcfb45c6cfdf952f"
+    },
+    {
+      "path": "skills/one-slide-update/assets/update-input.json",
+      "bytes": 256,
+      "sha256": "82fec32b976ec4e7417c5c3a135acc5ecfec23700a47cf9f11718ad4df6d245b"
+    },
+    {
+      "path": "skills/one-slide-update/scripts/fill_update.py",
+      "bytes": 16419,
+      "sha256": "db09d9e5dbf086e5e016971a3819c442acd1e8203fce32a85490aa6357b59820"
+    },
+    {
+      "path": "tests/VERIFICATION.md",
+      "bytes": 2884,
+      "sha256": "a9119ac72647bcddc558dea8542ce2ce658c55b296d61670dffd7916b154b035"
+    },
+    {
+      "path": "tests/behavioral-rubric.md",
+      "bytes": 1121,
+      "sha256": "d08a4e5d7556c107b13357496a9ae60cebc6db78088867d4cdad5bf5cd517844"
+    },
+    {
+      "path": "tests/behavioral-task.md",
+      "bytes": 1071,
+      "sha256": "5599e8aecbec57fbc77ab206ee52496d5523c98e2d40da105768d8cfc540d61f"
+    },
+    {
+      "path": "tests/test_fill_update.py",
+      "bytes": 7529,
+      "sha256": "de4c1185881c33890b24121a3d3eb12b6071ba8eb0fb2c873c954f7aba5f053c"
+    }
+  ]
+}
