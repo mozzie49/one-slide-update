@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "slide_size_px": [
+    1280,
+    720
+  ],
+  "font": "Liberation Sans",
+  "layouts": {
+    "standard": {
+      "template": "standard.pptx",
+      "slots": {
+        "project": {
+          "x": 56,
+          "y": 36,
+          "width": 850,
+          "height": 38,
+          "font_size_px": 28,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "metadata": {
+          "x": 56,
+          "y": 83,
+          "width": 920,
+          "height": 32,
+          "font_size_px": 22,
+          "bold": false,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "status": {
+          "x": 970,
+          "y": 40,
+          "width": 254,
+          "height": 35,
+          "font_size_px": 24,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "headline": {
+          "x": 56,
+          "y": 143,
+          "width": 1168,
+          "height": 122,
+          "font_size_px": 50,
+          "bold": true,
+          "max_lines": 2,
+          "line_height": 1.22
+        },
+        "progress": {
+          "x": 56,
+          "y": 314,
+          "width": 686,
+          "height": 234,
+          "font_size_px": 30,
+          "bold": false,
+          "max_lines": 6,
+          "line_height": 1.22
+        },
+        "next": {
+          "x": 848,
+          "y": 314,
+          "width": 376,
+          "height": 122,
+          "font_size_px": 28,
+          "bold": false,
+          "max_lines": 3,
+          "line_height": 1.22
+        },
+        "checkpoint": {
+          "x": 848,
+          "y": 490,
+          "width": 376,
+          "height": 124,
+          "font_size_px": 24,
+          "bold": false,
+          "max_lines": 4,
+          "line_height": 1.22
+        },
+        "decision": {
+          "x": 56,
+          "y": 599,
+          "width": 686,
+          "height": 85,
+          "font_size_px": 27,
+          "bold": false,
+          "max_lines": 2,
+          "line_height": 1.22
+        }
+      }
+    },
+    "blocker": {
+      "template": "blocker.pptx",
+      "slots": {
+        "project": {
+          "x": 56,
+          "y": 36,
+          "width": 850,
+          "height": 38,
+          "font_size_px": 28,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "metadata": {
+          "x": 56,
+          "y": 83,
+          "width": 920,
+          "height": 32,
+          "font_size_px": 22,
+          "bold": false,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "status": {
+          "x": 970,
+          "y": 40,
+          "width": 254,
+          "height": 35,
+          "font_size_px": 24,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "headline": {
+          "x": 56,
+          "y": 143,
+          "width": 1168,
+          "height": 122,
+          "font_size_px": 50,
+          "bold": true,
+          "max_lines": 2,
+          "line_height": 1.22
+        },
+        "decision": {
+          "x": 56,
+          "y": 328,
+          "width": 690,
+          "height": 148,
+          "font_size_px": 32,
+          "bold": false,
+          "max_lines": 3,
+          "line_height": 1.22
+        },
+        "checkpoint": {
+          "x": 56,
+          "y": 535,
+          "width": 690,
+          "height": 141,
+          "font_size_px": 26,
+          "bold": false,
+          "max_lines": 4,
+          "line_height": 1.22
+        },
+        "progress": {
+          "x": 856,
+          "y": 328,
+          "width": 368,
+          "height": 128,
+          "font_size_px": 25,
+          "bold": false,
+          "max_lines": 4,
+          "line_height": 1.22
+        },
+        "next": {
+          "x": 856,
+          "y": 537,
+          "width": 368,
+          "height": 139,
+          "font_size_px": 25,
+          "bold": false,
+          "max_lines": 4,
+          "line_height": 1.22
+        }
+      }
+    },
+    "milestone": {
+      "template": "milestone.pptx",
+      "slots": {
+        "project": {
+          "x": 56,
+          "y": 36,
+          "width": 850,
+          "height": 38,
+          "font_size_px": 28,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "metadata": {
+          "x": 56,
+          "y": 83,
+          "width": 920,
+          "height": 32,
+          "font_size_px": 22,
+          "bold": false,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "status": {
+          "x": 970,
+          "y": 40,
+          "width": 254,
+          "height": 35,
+          "font_size_px": 24,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "headline": {
+          "x": 56,
+          "y": 143,
+          "width": 1168,
+          "height": 122,
+          "font_size_px": 50,
+          "bold": true,
+          "max_lines": 2,
+          "line_height": 1.22
+        },
+        "milestone_date": {
+          "x": 56,
+          "y": 309,
+          "width": 545,
+          "height": 85,
+          "font_size_px": 58,
+          "bold": true,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "milestone_label": {
+          "x": 56,
+          "y": 405,
+          "width": 545,
+          "height": 78,
+          "font_size_px": 28,
+          "bold": false,
+          "max_lines": 2,
+          "line_height": 1.22
+        },
+        "owner": {
+          "x": 56,
+          "y": 492,
+          "width": 545,
+          "height": 38,
+          "font_size_px": 24,
+          "bold": false,
+          "max_lines": 1,
+          "line_height": 1.22
+        },
+        "progress": {
+          "x": 728,
+          "y": 329,
+          "width": 496,
+          "height": 135,
+          "font_size_px": 27,
+          "bold": false,
+          "max_lines": 4,
+          "line_height": 1.22
+        },
+        "next": {
+          "x": 728,
+          "y": 535,
+          "width": 496,
+          "height": 139,
+          "font_size_px": 27,
+          "bold": false,
+          "max_lines": 4,
+          "line_height": 1.22
+        },
+        "decision": {
+          "x": 56,
+          "y": 587,
+          "width": 545,
+          "height": 87,
+          "font_size_px": 26,
+          "bold": false,
+          "max_lines": 2,
+          "line_height": 1.22
+        }
+      }
+    }
+  }
+}

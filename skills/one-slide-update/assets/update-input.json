@@ -1,0 +1,14 @@
+{
+  "layout": "standard",
+  "project": null,
+  "period": null,
+  "as_of": null,
+  "status": null,
+  "headline": null,
+  "progress": [],
+  "next": [],
+  "decision": null,
+  "milestone": {"label": null, "date": null},
+  "owner": null,
+  "source_notes": []
+}
