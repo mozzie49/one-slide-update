@@ -8,6 +8,10 @@ The text stays editable; missing facts stay missing.
 
 ![Decision-first example](examples/previews/relay-blocker.png)
 
+[Open the editable example](examples/outputs/relay-blocker.pptx) and compare it
+with the [fictional source notes](examples/inputs/relay-weekly-notes.md).
+You can inspect the result before installing anything.
+
 ## Try it without an AI agent
 
 Python 3.10+ is the only runtime requirement. No packages to install, API keys,
@@ -58,16 +62,26 @@ cp -R /path/to/one-slide-update/skills/one-slide-update .claude/skills/
 
 Do not copy over an existing same-name skill without reviewing it first.
 
-Example request:
+For a first run without supplying your own notes, use the bundled fictional demo:
 
-> Use one-slide-update to turn these weekly notes into one editable PowerPoint
-> slide. Use the blocker layout. Preserve unknowns and don't invent metrics.
+- Codex: `$one-slide-update Run the bundled fictional demo using the blocker layout. Save ./my-update.pptx and check it.`
+- Claude Code: `/one-slide-update Run the bundled fictional demo using the blocker layout. Save ./my-update.pptx and check it.`
+
+The demo ships inside the copied skill. Expected: an editable slide titled
+“Pilot waits on export permissions,” an explicit “At risk” status, the supplied
+“24 October” checkpoint, and “Owner not provided.” No KPI or completion percentage
+is invented. The checker returns `"result": "PASS"`; open the file to review it.
+
+For your own update, invoke the same skill and supply your notes, output path,
+and preferred layout. Missing facts remain missing.
 
 The discovery locations above follow the official [Codex skill documentation](https://learn.chatgpt.com/docs/build-skills)
 and [Claude Code skill documentation](https://code.claude.com/docs/en/skills).
 This package follows the [Agent Skills format](https://agentskills.io/specification).
-Actual automatic loading has not been exercised in those products in this
-release. Other agents may read the instruction file, but cross-agent discovery
+Codex CLI 0.159.2 discovered the copied skill as enabled in a fresh temporary
+project and user directory using its `skills/list` API. That check did not run a
+model turn or test automatic skill selection. Claude Code discovery and agent
+execution remain untested. Other agents may read the instruction file, but cross-agent discovery
 and file-generation support vary. Claude web/Cowork and Google Slides workflows
 are not claimed as tested.
 
