@@ -49,12 +49,13 @@ question only if the missing fact materially blocks the requested update.
 
 ## Fill and check
 
-Resolve these paths relative to this skill's directory. No install or network is
-needed. Use a new output filename; the helper refuses to overwrite files.
+Resolve `SKILL_DIR` to the absolute directory containing this `SKILL.md`, not the
+current project directory. No runtime install or network is needed. Use a new
+output filename; the helper refuses to overwrite files.
 
 ```sh
-python scripts/fill_update.py fill /path/to/update.json /path/to/update.pptx --layout standard
-python scripts/fill_update.py check /path/to/update.pptx --layout standard
+python3 "$SKILL_DIR/scripts/fill_update.py" fill /path/to/update.json /path/to/update.pptx --layout standard
+python3 "$SKILL_DIR/scripts/fill_update.py" check /path/to/update.pptx --layout standard
 ```
 
 The helper fills the bundled templates, not arbitrary PPTX files. It checks the
@@ -63,6 +64,23 @@ sizes, and conservative text-fit budgets. It inserts explicit line breaks and
 never shrinks fonts. Oversize content is an error: shorten wording without
 changing meaning, choose a better-fitting layout, or tell the user one slide
 cannot contain the required detail. Don't silently omit facts or truncate text.
+
+## First-use demo
+
+When the user explicitly asks to try the skill or run its demo, use the bundled
+[fictional notes](assets/demo/relay-weekly-notes.md) and prepared
+[sample JSON](assets/demo/relay-update.json). Both ship inside the skill, so this
+works after a skill-only installation. Never use these facts for a real update.
+
+```sh
+python3 "$SKILL_DIR/scripts/fill_update.py" fill "$SKILL_DIR/assets/demo/relay-update.json" ./my-update.pptx --layout blocker
+python3 "$SKILL_DIR/scripts/fill_update.py" check ./my-update.pptx --layout blocker
+```
+
+Expected: one editable slide titled “Pilot waits on export permissions,” with
+“At risk,” “24 October,” and “Owner not provided.” There is no invented KPI or
+progress percentage. The checker reports `"result": "PASS"`; this is a structural
+check, not visual review. Read the fictional notes to judge content preservation.
 
 ## Review and deliver
 
