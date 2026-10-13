@@ -2,6 +2,28 @@
 
 Checked 1 October 2026. Local candidate for 0.2.0, based on 0.1.0.
 
+## First-use follow-up, 13 October 2026
+
+- The published source at `3961ae9c9c526690b6bf0ec6389199dd48012187`
+  passed its existing 49 tests before this change
+- This candidate passes 52 tests, including installed-skill-only fictional demos
+  for all three layouts under both `.agents/skills` and `.claude/skills`. The
+  helper runs from the project directory, with input and resources inside the
+  copied skill. The fixture remains unchanged, and an existing output is refused
+- Each generated demo's slide XML exactly matches the corresponding previously
+  published and rendered Relay example. Only its speaker-note source path points
+  to the newly bundled fictional notes. No template, geometry, font metric or
+  runtime helper was changed; no new cross-editor visual test is claimed
+- Codex CLI 0.159.2's app-server `skills/list` returned this project-local skill
+  with `enabled: true`, `scope: repo`, the correct installed `SKILL.md` path, and
+  no discovery errors in a fresh temporary HOME/CODEX_HOME and project
+- That discovery check used only `initialize` and `skills/list`, with no model
+  turn. It is not a test of automatic skill selection, factual extraction, or
+  agent execution. Claude Code was not invoked; its discovery remains untested
+
+`RELEASE_MANIFEST.json` continues to describe the historical 0.2.0 source tree.
+It is not a manifest for this unreleased candidate.
+
 ## Passed in this update
 
 - 49 Python unittest cases: all original 22 retained, plus 27 Chinese-profile
